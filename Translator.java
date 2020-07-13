@@ -1,4 +1,10 @@
 import java.util.ArrayList;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
 /**
  * Translates into Corpus or Grineer
  *
@@ -12,10 +18,22 @@ public class Translator
      */
     public Translator()
     {
-        
+
     }
 
-     /**
+    public static String readFileAsString(String fileName) {
+        String text = "";
+        try {
+            text = new String(Files.readAllBytes(Paths.get(fileName)));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return text;
+    }
+
+
+    /**
      * Translates to Grineer
      *
      * @param  input  a input text
@@ -246,8 +264,8 @@ public class Translator
         }
         return stringify(grineer);
     }
-    
-     /**
+
+    /**
      * Translates to Corpus
      *
      * @param  input  a input text
@@ -348,8 +366,8 @@ public class Translator
         }
         return stringify(corpus);
     }
-    
-     /**
+
+    /**
      * Turns a string into an arraylist of single substrings
      *
      * @param  str  input string
@@ -364,8 +382,8 @@ public class Translator
         }
         return arrStr;
     }
-    
-     /**
+
+    /**
      * Probably unnecessary but that's okay this turns an arraylist into a string
      *
      * @param  arrString  an arraylist of strings

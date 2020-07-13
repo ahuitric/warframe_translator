@@ -13,9 +13,27 @@ public class Driver
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter Grineer, Corpus or Both");
         String langChoice = scan.nextLine();
-        System.out.println("Enter english in lowercase");
-        String text = scan.nextLine();
+        System.out.println("Input or File?");
+        String inputChoice = scan.nextLine();
         Translator t = new Translator();
+        String text;
+        if (inputChoice.equals("Input"))
+        {
+            System.out.println("Input english in all lowercase below");
+            text = scan.nextLine();
+        }
+        else if (inputChoice.equals("File"))
+        {
+            System.out.println("Input file name");
+            String fileName = scan.nextLine();
+            text = t.readFileAsString(fileName);
+        }
+        else
+        {
+            text = null;
+            System.out.println("Invalid Format");
+        }
+        
         if (langChoice.equals("Grineer"))
         {
             System.out.println(t.translateToGrineer(text));
