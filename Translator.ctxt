@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Translator
+comment0.text=\r\n\ Translates\ into\ Corpus\ or\ Grineer\r\n\r\n\ @author\ Alana\ Huitric\r\n\ @version\ 1.0\r\n
+comment1.params=
+comment1.target=Translator()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Translator\r\n
+comment2.params=input
+comment2.target=java.lang.String\ translateToGrineer(java.lang.String)
+comment2.text=\r\n\ Translates\ to\ Grineer\r\n\r\n\ @param\ \ input\ \ a\ input\ text\r\n\ @return\ \ \ \ lowercase\ string\ in\ Grineer\r\n
+comment3.params=input
+comment3.target=java.lang.String\ translateToCorpus(java.lang.String)
+comment3.text=\r\n\ Translates\ to\ Corpus\r\n\r\n\ @param\ \ input\ \ a\ input\ text\r\n\ @return\ \ \ \ lowercase\ string\ in\ Corpus\r\n
+comment4.params=str
+comment4.target=java.util.ArrayList\ arrayify(java.lang.String)
+comment4.text=\r\n\ Turns\ a\ string\ into\ an\ arraylist\ of\ single\ substrings\r\n\r\n\ @param\ \ str\ \ input\ string\r\n\ @return\ \ \ \ an\ arraylist\ of\ substrings\r\n
+comment5.params=arrString
+comment5.target=java.lang.String\ stringify(java.util.ArrayList)
+comment5.text=\r\n\ Probably\ unnecessary\ but\ that's\ okay\ this\ turns\ an\ arraylist\ into\ a\ string\r\n\r\n\ @param\ \ arrString\ \ an\ arraylist\ of\ strings\r\n\ @return\ \ \ \ String\ \ concatenated\ arraylist\r\n
+numComments=6
